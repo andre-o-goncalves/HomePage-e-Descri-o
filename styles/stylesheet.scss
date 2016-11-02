@@ -1,0 +1,152 @@
+
+// Variáveis ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+$azul: #5e9bd4;
+$cinzento: #6e6e6e;
+
+$margem-bottom_posts: 20px;
+
+
+// Body ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+body{
+  background-image: url(content/img_fundo.png); // Resolver problema dos gráficos da pauta no background
+  background-size: cover;
+  background-repeat: repeat-y;
+  width: 80%;
+  margin: 0 auto;
+}
+
+#fundo_azul{
+  background: white;
+  border-style: solid;
+  border-width: 15px;
+  border-color: $azul;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  padding: 10vw;
+}
+
+
+// Header ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+header{
+  text-align: center;
+  margin-bottom: 80px;
+
+  img{
+    width: 80%;
+    margin-bottom: 40px;
+  }
+}
+
+h1{
+  font-family: BebasNeueBold;
+  font-size: 16pt;
+  letter-spacing: 9pt;
+  text-align: center;
+  color: $cinzento;
+  margin: 20px;
+}
+
+a{
+  text-decoration: none;
+}
+
+a:hover{
+  text-decoration: underline;
+  color: $cinzento;
+}
+
+
+// Descrição (The Goal) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+p{
+  font-family: Times, serif;
+  font-size: 12pt;
+  width: 80%;
+  margin: 0 auto;
+  text-align: justify;
+}
+
+.paragrafo_margem_maior{
+  margin-bottom: 15px;
+}
+
+
+// Posts ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.post{
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+hr{
+  width: 80%;
+  margin-bottom: 50px;
+}
+
+.titulo{
+  margin-bottom: 50px;
+}
+
+.img1{
+  width: 80%;
+  margin-bottom: $margem-bottom_posts;
+}
+
+.texto_e_imagens{ // ~ ~ ~ ~ ~ ~ ~ ~
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: $margem-bottom_posts;
+
+  p{
+    width: 75%;
+    font-size: 14pt;
+    margin-bottom: $margem-bottom_posts;
+  }
+
+  .img_vertical{
+    width: 50%;
+    margin-bottom: $margem-bottom_posts;
+    align-self: flex-end;
+  }
+
+  .img_horizontal{
+    width: 75%;
+    margin-bottom: $margem-bottom_posts;
+  }
+
+  .texto_esquerda{
+    text-align: left;
+  }
+
+  .texto_direita{
+    text-align: right;
+    align-self: flex-end;
+  }
+}
+
+.pauta_desenho{
+  width: 65%;
+  margin-bottom: $margem-bottom_posts;
+}
+
+.espessura{
+  border-style: solid;
+  border-width: 3px;
+}
+
+#cor_rc{
+  color: #ff4949; // Cor certa?
+}
+
+
+// Ricardo Coelho ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+#titulo_rc{
+  width: 40%;
+}

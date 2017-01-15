@@ -4,14 +4,14 @@
 $azul: #5e9bd4;
 $cinzento: #6e6e6e;
 
-$margem-bottom_posts: 20px;
+$margem-bottom_posts: 25px;
 
 
 // Body ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 body{
-  background-image: url(content/img_fundo.png); // Resolver problema dos gráficos da pauta no background
-  background-size: cover;
+  background-image: url(content/img_fundo.png);
+  background-size: 100vw;
   background-repeat: repeat-y;
   width: 80%;
   margin: 0 auto;
@@ -23,130 +23,399 @@ body{
   border-width: 15px;
   border-color: $azul;
   margin-top: 10%;
-  margin-bottom: 10%;
+  margin-bottom: 40px;
   padding: 10vw;
+  padding-bottom: 8vw;
 }
 
 
 // Header ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-header{
+header, #next_prev{
   text-align: center;
   margin-bottom: 80px;
+  transform: skewY(-15deg);
 
-  img{
-    width: 80%;
-    margin-bottom: 40px;
+  a{
+    text-decoration: none;
+    color: $cinzento;
+
+    h1{
+      font-family: BebasNeueBold;
+      font-size: 24pt;
+      letter-spacing: 18pt;
+      line-height: 35pt;
+      margin-top: 70px;
+      margin-bottom: 100px;
+    }
+  }
+
+  a:hover{
+    text-decoration: underline;
+  }
+
+  li{
+    font-family: BebasNeueBold;
+    font-size: 16pt;
+    letter-spacing: 9pt;
+    margin: 20px;
   }
 }
 
-h1{
-  font-family: BebasNeueBold;
-  font-size: 16pt;
-  letter-spacing: 9pt;
-  text-align: center;
+#next_prev{
+  margin-bottom: 0;
+}
+
+// To the top ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+button{
   color: $cinzento;
-  margin: 20px;
-}
-
-a{
+  background: none;
+  border: none;
+  font-family: BebasNeueBold;
+  font-size: 14pt;
+  letter-spacing: 8pt;
+  line-height: 16pt;
+  text-align: center;
+  transform: skewY(-15deg);
   text-decoration: none;
+  position: fixed;
+  z-index: 1;
+  bottom: 33vh;
+  right: 14vw;
 }
 
-a:hover{
+#topo:hover{
   text-decoration: underline;
   color: $cinzento;
+}
+
+// Footer ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+footer{
+  margin-bottom: 40px;
+
+  ul{
+    font-family: Times, serif;
+    font-size: 12pt;
+    font-style: italic;
+    color: $azul;
+
+    li{
+      margin-bottom: 10px;
+
+      span{
+        background: white;
+        padding: 5px;
+
+        a{
+          color: $azul;
+          font-weight: bold;
+          text-decoration: none;
+        }
+
+        a:hover{
+          text-decoration: underline;
+        }
+      }
+
+      #copy{
+        font-style: normal;
+        color: $cinzento;
+      }
+    }
+  }
 }
 
 
 // Descrição (The Goal) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-p{
-  font-family: Times, serif;
-  font-size: 12pt;
+.content{ // também pertence ao Special Thanks
   width: 80%;
   margin: 0 auto;
-  text-align: justify;
-}
 
-.paragrafo_margem_maior{
-  margin-bottom: 15px;
+  .separador_inicial{
+    margin-bottom: 60px;
+  }
+
+  p{
+    font-size: 13pt;
+    line-height: 15pt;
+
+    em{
+      font-style: italic;
+    }
+
+    a{
+      color: $azul;
+      text-decoration: none;
+    }
+
+    a:hover{
+      text-decoration: underline;
+    }
+  }
+
+  .margem_maior{
+    margin-bottom: 15px;
+  }
+
+  .separador_final{
+    width: 30%;
+    margin: 0 auto;
+    margin-top: 60px;
+    transform: skewY(-15deg);
+  }
+
+  #agradecimento{
+    text-align: center;
+
+    p{
+      line-height: 13pt;
+    }
+  }
 }
 
 
 // Posts ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .post{
-  text-align: center;
-  margin-bottom: 100px;
-}
-
-hr{
-  width: 80%;
-  margin-bottom: 50px;
-}
-
-.titulo{
-  margin-bottom: 50px;
-}
-
-.img1{
-  width: 80%;
-  margin-bottom: $margem-bottom_posts;
-}
-
-.texto_e_imagens{ // ~ ~ ~ ~ ~ ~ ~ ~
   width: 80%;
   margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-bottom: $margem-bottom_posts;
+  text-align: center;
+  margin-bottom: 100px;
 
-  p{
-    width: 75%;
-    font-size: 14pt;
+  .separador{
+    margin-bottom: 70px;
+    display: flex;
+    flex-flow: nowrap;
+    align-items: center;
+
+    hr{
+      width: 100%;
+    }
+
+    p{
+      font-family: Times, serif;
+      font-size: 10pt;
+      font-style: italic;
+      width: 50%;
+    }
+  }
+
+  .titulo{
+    font-family: BebasNeueBold;
+    font-size: 24pt;
+    letter-spacing: 18pt;
+    line-height: 35pt;
+    transform: skewY(-15deg);
+    margin-bottom: 70px;
+
+    a{
+      text-decoration: none;
+      color: $cinzento;
+    }
+
+    a:hover{
+      text-decoration: underline;
+    }
+  }
+
+  .texto_e_imagens{ // ~ ~ ~ ~ ~ ~ ~ ~
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: $margem-bottom_posts;
+
+    .img{
+      width: 100%;
+      margin-bottom: $margem-bottom_posts;
+    }
+
+    p{
+      font-size: 14pt;
+      text-align: left;
+      line-height: 16pt;
+      margin-bottom: $margem-bottom_posts;
+    }
+
+    .texto{
+      width: 75%;
+    }
+
+    .img3-4_esquerda{
+      width: 75%;
+    }
+
+    .img3-4_direita{
+      width: 75%;
+      padding-left: 25%;
+    }
+
+    .img3-4_centro{
+      width: 75%;
+      padding-left: 12.5%;
+    }
+
+    .img1-2_esquerda{
+      width: 50%;
+    }
+
+    .img1-2_direita{
+      width: 50%;
+      padding-left: 50%;
+    }
+
+    .img1-2_centro{
+      width: 50%;
+      padding-left: 25%;
+    }
+  }
+
+  .pauta_desenho{
+    width: 65%;
     margin-bottom: $margem-bottom_posts;
   }
 
-  .img_vertical{
-    width: 50%;
-    margin-bottom: $margem-bottom_posts;
-    align-self: flex-end;
+  .espessura{
+    border-style: solid;
+    border-width: 3px;
   }
-
-  .img_horizontal{
-    width: 75%;
-    margin-bottom: $margem-bottom_posts;
-  }
-
-  .texto_esquerda{
-    text-align: left;
-  }
-
-  .texto_direita{
-    text-align: right;
-    align-self: flex-end;
-  }
-}
-
-.pauta_desenho{
-  width: 65%;
-  margin-bottom: $margem-bottom_posts;
-}
-
-.espessura{
-  border-style: solid;
-  border-width: 3px;
-}
-
-#cor_rc{
-  color: #ff4949; // Cor certa?
 }
 
 
 // Ricardo Coelho ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#titulo_rc{
-  width: 40%;
+#RC-txt2{
+  margin-top: -62px;
+}
+
+#RC-txt3{
+  z-index: 1;
+}
+
+#RC-img4{
+  margin-top: -88px;
+}
+
+#cor_rc{
+  color: #ff5b5b;
+  width: 80%;
+  margin-top: 50px;
+}
+
+
+// Pedro Gonçalves ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+#PG-img3{
+  width: 50%;
+  margin-bottom: -183px;
+}
+
+#PG-txt2{
+  width: 45%;
+  padding-left: 55%;
+}
+
+#PG-txt3{
+  margin-bottom: -30px;
+  z-index: 1;
+}
+
+#PG-img4{
+  margin-bottom: $margem-bottom_posts;
+}
+
+#cor_pg{
+  color: #5c68d0;
+  width: 80%;
+  margin-top: 50px;
+}
+
+// Peixotos ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+#PX-img2{
+  margin-bottom: $margem-bottom_posts;
+}
+
+#PX-img3{
+  width: 45%;
+  padding-right: 5%;
+  margin-bottom: -99px;
+}
+
+#PX-txt2{
+  width: 45%;
+  padding-left: 55%;
+}
+
+#PX-txt3{
+  margin-bottom: -42px;
+  z-index: 1;
+}
+
+#cor_px{
+  color: #46be81;
+  width: 80%;
+  margin-top: 50px;
+}
+
+// Pedro Chibante ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+#PC-img2{
+  margin-bottom: -53px;
+}
+
+#PC-img3{
+  margin-bottom: $margem-bottom_posts;
+}
+
+#PC-txt3{
+  margin-bottom: -80px;
+  z-index: 1;
+}
+
+#cor_pc{
+  color: #70d1d4;
+  width: 80%;
+  margin-top: 50px;
+}
+
+// Mané Fernandes ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+#MF-txt2{
+  margin-top: -64px;
+}
+
+#MF-txt4{
+  margin-top: -20px;
+}
+
+#cor_mf{
+  color: #cfd160;
+  width: 80%;
+  margin-top: 50px;
+}
+
+// Emanuel Macaia ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+#EM-txt1{
+  margin-bottom: -20px;
+  z-index: 1;
+}
+
+#EM-txt2{
+  margin-bottom: -68px;
+  z-index: 1;
+}
+
+#EM-img4{
+  margin-top: $margem-bottom_posts;
+  margin-bottom: $margem-bottom_posts;
+}
+
+#cor_em{
+  color: #f58c48;
+  width: 80%;
+  margin-top: 50px;
 }
